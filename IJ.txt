@@ -1,0 +1,7 @@
+mvn clean install
+
+cp /Applications/IntelliJ\ IDEA\ CE.app/Contents/bin/idea.properties ~/Library/Preferences/IdeaIC2017.2/
+
+idea.max.intellisense.filesize=10000
+
+comment out "ITUseMiniCluster.java"

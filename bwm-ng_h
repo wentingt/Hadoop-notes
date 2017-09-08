@@ -1,0 +1,38 @@
+Bandwidth Monitor NG (bwm-ng) v0.6.1
+Copyright (C) 2004-2007 Volker Gropp <bwmng@gropp.org>
+USAGE: bwm-ng [OPTION] ... [CONFIGFILE]
+displays current ethernet interfaces stats
+
+Options:
+  -t, --timeout <msec>    displays stats every <msec> (1msec = 1/1000sec)
+                          default: 500
+  -d, --dynamic [value]   show values dynamicly (Byte KB or MB)
+  -a, --allif [mode]      where mode is one of:
+                          0=show only up (and selected) interfaces
+                          1=show all up interfaces (default)
+                          2=show all and down interfaces
+  -I, --interfaces <list> show only interfaces in <list> (comma seperated), or
+                          if list is prefaced with % show all but interfaces
+                          in list
+  -S, --sumhidden [value] count hidden interfaces for total
+  -A, --avglength <sec>   sets the span of average stats (Default 30s)
+  -D, --daemon [value]    fork into background and daemonize
+  -h, --help              displays this help
+  -V, --version           print version info
+
+Input:
+  -i, --input <method>    input method, one of: getifaddrs sysctl netstat ioservice
+
+Output:
+  -o, --output <method>   output method, one of: 
+                          plain, curses, curses2, csv, html
+  -u, --unit <value>      unit to show. one of bytes, bits, packets, errors
+  -T, --type <value>      type of stats. one of rate, max, sum, avg
+  -C, --csvchar <char>    delimiter for csv
+  -F, --outfile <file>    output file for csv and html (default stdout)
+  -R, --htmlrefresh <num> meta refresh for html output
+  -H, --htmlheader        show <html> and <meta> frame for html output
+  -c, --count <num>       number of query/output for plain & csv
+  -N, --ansiout           disable ansi codes for plain output
+                          (ie 1 for one single output)
+

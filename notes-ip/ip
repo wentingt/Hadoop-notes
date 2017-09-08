@@ -1,0 +1,10 @@
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip -V
+where  OBJECT := { link | addr | route | neigh }
+       OPTIONS := { -4 | -6 }
+
+iproute2mac
+Homepage: https://github.com/brona/iproute2mac
+This is CLI wrapper for basic network utilities on Mac OS X inspired with iproute2 on Linux systems.
+Provided functionality is limited and command output is not fully compatible with iproute2.
+For advanced usage use netstat, ifconfig, ndp, arp, route and networksetup directly.

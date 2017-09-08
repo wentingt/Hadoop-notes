@@ -1,0 +1,8 @@
+default via 35.3.0.1 dev en0
+35.3.0.0/17 dev en0  scope link
+35.3.0.1/32 dev en0  scope link
+35.3.39.19/32 dev en0  scope link
+127.0.0.0/8 via 127.0.0.1 dev lo0
+169.254.0.0/16 dev en0  scope link
+224.0.0.0/4 dev en0  scope link
+255.255.255.255/32 dev en0  scope link

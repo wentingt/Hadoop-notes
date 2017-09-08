@@ -1,0 +1,6 @@
+fe80::1 dev lo0 lladdr (incomplete) REACHABLE
+fe80::1ce1:71b4:1109:e0e8 dev en0 lladdr 4c:32:75:93:63:a1 REACHABLE
+fe80::3035:b0ff:fe54:6a69 dev awdl0 lladdr 32:35:b0:54:6a:69 REACHABLE
+fe80::be85:2fe1:3e22:6bb7 dev utun0 lladdr (incomplete) REACHABLE
+35.3.0.1 dev en0 lladdr 0:0:5e:0:1:1 REACHABLE
+224.0.0.251 dev en0 lladdr 1:0:5e:0:0:fb REACHABLE

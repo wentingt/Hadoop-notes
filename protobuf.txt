@@ -1,0 +1,8 @@
+sudo apt-get install protobuf-compiler
+protoc --verison
+
+change protoc version in /hadoop-project/pom.xml
+
+could cause compile problems
+
+use protoc.sh
