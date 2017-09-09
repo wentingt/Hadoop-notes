@@ -1,0 +1,5 @@
+git switch to hadoop-3.0.0-alpha4
+
+run mapreduce job on single node
+
+run mapreduce job on multi nodes
