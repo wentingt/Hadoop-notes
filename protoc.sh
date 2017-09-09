@@ -10,5 +10,6 @@ sudo make check
 sudo make install
 
 # which protoc
+sudo ldconfig
 export PATH=$PATH:/usr/bin/
 protoc --version
