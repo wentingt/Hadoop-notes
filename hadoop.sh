@@ -17,3 +17,6 @@ mvn package -Pdist -Pdoc -Psrc -Dtar -DskipTests
 # hadoop-3.1.0-SNAPSHOT.tar.gz
 # also generated: hadoop-3.1.0-SNAPSHOT
 # also generated: hadoop-3.1.0-SNAPSHOT-src.tar.gz
+
+# original errors on linux
+# use stable release instead
