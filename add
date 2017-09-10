@@ -1,0 +1,26 @@
+import com.google.common.util.concurrent.RateLimiter;
+
+private RateLimiter rateLimiter;
+
+this.rateLimiter = rateLimiter;
+
+rateLimiter.acquire();
+
+
+import com.google.common.util.concurrent.RateLimiter;
+
+private long RATE  = 1024 * 1024 * 1024;
+private RateLimiter rateLimiter;
+private long T_start, T_end;
+    
+ch.write(response);
+if (ch.getPipeline().get(SslHandler.class) == null) {
+	rateLimiter = RateLimiter.create(RATE / shuffleBufferSize);
+} else {
+	rateLimiter = RateLimiter.create(RATE / sslFileBufferSize);
+}
+
+public void operationComplete(ChannelFuture future) {
+     T_end = System.currentTimeMillis();
+     double rate = info.partLength * 1000.0 / (double) (T_end - T_start);
+     System.out.println(rate);
