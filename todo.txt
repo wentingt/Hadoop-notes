@@ -1,1 +1,46 @@
+Test on netty-example.
 
+map<shuffleId, shuffleInfo> shuffleInfoMap
+map<shuffleId, shuffleRate> shuffleRateMap
+
+class ShuffleInfo{
+  jobId,
+  mapId, mapHost, // ch.getLocalAddress().getHost()
+  reduceId, reduceHost, // ch.getRemoteAddress().getHost()
+  shuffleSize // to be shuffled
+};
+
+// not event driven, so not use netty
+GaiaFetcher extends Thread {
+  @override
+  void run() {
+    // follow that of event fetcher
+    for (;;) {
+      send shuffleInfoMap to Gaia
+      receive shuffleRateMap<shuffleId, shuffleRate>
+      // sleep for some time
+    }
+  }
+};
+
+// bookkeep information
+ch.write (response);
+shuffleInfoMap.put(shuffleId++);
+
+how to update shuffleSize:
+channelFuture.setProgress(long amount, long current, long total)
+
+ChannelFutureProgressListener {
+  @Override
+   void operationProgressed(ChannelFuture future, long amount, long current, long total) {
+      change shuffleInfoMap[shuffleId].shuffleSize
+   }
+}
+
+writeFuture.addListener(new ChannelFutureListener() {
+    @Override
+    public void operationComplete(ChannelFuture future) {
+      // ...
+      delete shuffleInfoMap[shuffleId]
+    }
+});
