@@ -2,4 +2,6 @@ Test on netty-example.
 
 change to thread-safe map
 
-implement client to Gaia
+how to wrap map into channelbuffer
+
+disconnect but not close (rate limit)
