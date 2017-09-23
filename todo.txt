@@ -4,4 +4,4 @@ change to thread-safe map
 
 how to wrap map into channelbuffer
 
-disconnect but not close (rate limit)
+add ratelimiter
