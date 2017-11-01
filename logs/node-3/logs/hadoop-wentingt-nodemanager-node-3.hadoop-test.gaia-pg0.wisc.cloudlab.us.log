@@ -1,0 +1,761 @@
+2017-11-01 12:17:09,254 INFO org.apache.hadoop.yarn.server.nodemanager.NodeManager: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NodeManager
+STARTUP_MSG:   host = c220g1-030803.wisc.cloudlab.us/128.104.222.33
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.0.0-beta1
+STARTUP_MSG:   classpath = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/etc/hadoop:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/accessors-smart-1.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jersey-json-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/log4j-1.2.17.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-client-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/curator-recipes-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-servlet-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/curator-framework-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/junit-4.11.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/curator-client-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/avro-1.7.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/asm-5.0.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-io-2.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-logging-1.1.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jettison-1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/hadoop-annotations-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-util-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-math3-3.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-codec-1.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerby-config-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/metrics-core-3.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-util-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-cli-1.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/httpcore-4.4.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/json-smart-2.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-server-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-webapp-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/gson-2.2.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/paranamer-2.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-http-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/guava-19.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jsch-0.1.54.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-server-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/stax2-api-3.1.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jersey-servlet-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-net-3.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jersey-server-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/httpclient-4.5.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/token-provider-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/netty-3.10.5.Final.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerby-util-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-core-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-lang3-3.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jsr305-3.0.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-core-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/zookeeper-3.4.9.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-databind-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/hamcrest-core-1.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-common-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jsp-api-2.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/mockito-all-1.8.5.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-collections-3.2.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-io-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-xml-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jetty-security-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/hadoop-auth-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jersey-core-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/re2j-1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/jackson-annotations-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-lang-2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/xz-1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/commons-compress-1.4.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/hadoop-common-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/hadoop-nfs-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/hadoop-kms-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/hadoop-common-3.0.0-beta1-tests.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/curator-recipes-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-servlet-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/curator-framework-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/snappy-java-1.0.4.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/curator-client-2.12.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/avro-1.7.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/asm-5.0.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-io-2.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/okhttp-2.4.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jettison-1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/hadoop-annotations-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-util-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/json-smart-2.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-webapp-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/gson-2.2.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/paranamer-2.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-http-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/guava-19.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-server-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-net-3.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-lang3-3.4.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-core-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/zookeeper-3.4.9.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/okio-1.4.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-databind-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-io-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-xml-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jetty-security-9.3.19.v20170502.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/hadoop-auth-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/re2j-1.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/jackson-annotations-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/xz-1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/commons-compress-1.4.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-native-client-3.0.0-beta1-tests.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-client-3.0.0-beta1-tests.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-client-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-native-client-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-nfs-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-3.0.0-beta1-tests.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/hdfs/hadoop-hdfs-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.0.0-beta1-tests.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jsp-2.1-6.1.14.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/javax.inject-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-procedure-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/joni-2.1.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/disruptor-3.3.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/commons-math-2.2.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jcodings-1.0.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jackson-jaxrs-base-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/findbugs-annotations-1.3.9-1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-common-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-client-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-annotations-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/metrics-core-3.0.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/json-io-2.5.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/java-util-1.9.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/commons-el-1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jsp-api-2.1-6.1.14.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/commons-csv-1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/metrics-core-2.2.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jersey-client-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-hadoop-compat-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jasper-compiler-5.5.23.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-hadoop2-compat-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-prefix-tree-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jasper-runtime-5.5.23.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-protocol-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/htrace-core-3.1.0-incubating.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/guice-4.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/hbase-server-1.2.6.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/fst-2.50.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jamon-runtime-2.4.1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/servlet-api-2.5-6.1.14.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/aopalliance-1.0.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.7.8.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-tests-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-client-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-common-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-timelineservice-hbase-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-timelineservice-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-common-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-router-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-registry-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-api-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.0.0-beta1.jar:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-server-timelineservice-hbase-tests-3.0.0-beta1.jar
+STARTUP_MSG:   build = https://github.com/wentingt/hadoop-3.0.0-beta1-src.git -r a2ea8361bab4f0655d274025c59f1f00d491d526; compiled by 'wentingt' on 2017-11-01T18:05Z
+STARTUP_MSG:   java = 1.8.0_131
+************************************************************/
+2017-11-01 12:17:09,269 INFO org.apache.hadoop.yarn.server.nodemanager.NodeManager: registered UNIX signal handlers for [TERM, HUP, INT]
+2017-11-01 12:17:09,715 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-11-01 12:17:09,930 INFO org.apache.hadoop.yarn.server.nodemanager.NodeManager: Node Manager health check script is not available or doesn't have execute permission, so not starting the node health script runner.
+2017-11-01 12:17:10,000 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ContainerEventDispatcher
+2017-11-01 12:17:10,001 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ApplicationEventDispatcher
+2017-11-01 12:17:10,001 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$LocalizationEventHandlerWrapper
+2017-11-01 12:17:10,002 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServicesEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices
+2017-11-01 12:17:10,002 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl
+2017-11-01 12:17:10,003 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncherEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
+2017-11-01 12:17:10,004 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerSchedulerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler
+2017-11-01 12:17:10,025 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.ContainerManagerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl
+2017-11-01 12:17:10,026 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.NodeManagerEventType for class org.apache.hadoop.yarn.server.nodemanager.NodeManager
+2017-11-01 12:17:10,110 INFO org.apache.commons.beanutils.FluentPropertyBeanIntrospector: Error when creating PropertyDescriptor for public final void org.apache.commons.configuration2.AbstractConfiguration.setProperty(java.lang.String,java.lang.Object)! Ignoring this property.
+2017-11-01 12:17:10,142 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-11-01 12:17:10,198 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2017-11-01 12:17:10,198 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: NodeManager metrics system started
+2017-11-01 12:17:10,227 INFO org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:17:10,240 INFO org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:17:10,360 INFO org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl:  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@14f232c4
+2017-11-01 12:17:10,362 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.event.LogHandlerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler
+2017-11-01 12:17:10,364 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadService
+2017-11-01 12:17:10,364 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: AMRMProxyService is disabled
+2017-11-01 12:17:10,364 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: per directory file limit = 8192
+2017-11-01 12:17:10,390 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:17:10,397 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker
+2017-11-01 12:17:10,433 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Adding auxiliary service mapreduce_shuffle, "mapreduce_shuffle"
+2017-11-01 12:17:10,532 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl:  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@53251a66
+2017-11-01 12:17:10,533 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl:  Using ResourceCalculatorProcessTree : null
+2017-11-01 12:17:10,535 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Physical memory check enabled: true
+2017-11-01 12:17:10,535 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Virtual memory check enabled: true
+2017-11-01 12:17:10,535 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: ContainersMonitor enabled: true
+2017-11-01 12:17:10,537 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Not a recoverable state store. Nothing to recover.
+2017-11-01 12:17:10,538 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Nodemanager resources: memory set to 8192MB.
+2017-11-01 12:17:10,538 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Nodemanager resources: vcores set to 8.
+2017-11-01 12:17:10,549 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Initialized nodemanager with : physical-memory=8192 virtual-memory=24576 virtual-cores=8
+2017-11-01 12:17:10,617 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 2000 scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler
+2017-11-01 12:17:10,641 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 43522
+2017-11-01 12:17:10,935 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.api.ContainerManagementProtocolPB to the server
+2017-11-01 12:17:10,935 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-11-01 12:17:10,935 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 43522: starting
+2017-11-01 12:17:10,946 INFO org.apache.hadoop.yarn.server.nodemanager.security.NMContainerTokenSecretManager: Updating node address : c220g1-030803.wisc.cloudlab.us:43522
+2017-11-01 12:17:10,955 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 500 scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler
+2017-11-01 12:17:10,955 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8040
+2017-11-01 12:17:10,958 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB to the server
+2017-11-01 12:17:10,959 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-11-01 12:17:10,959 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8040: starting
+2017-11-01 12:17:10,960 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Localizer started on port 8040
+2017-11-01 12:17:10,993 INFO org.apache.hadoop.mapred.IndexCache: IndexCache created with max memory = 10485760
+2017-11-01 12:17:11,007 INFO org.apache.hadoop.mapred.ShuffleHandler: mapreduce_shuffle listening on port 13562
+2017-11-01 12:17:11,008 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: ContainerManager started at c220g1-030803.wisc.cloudlab.us/128.104.222.33:43522
+2017-11-01 12:17:11,008 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: ContainerManager bound to 0.0.0.0/0.0.0.0:0
+2017-11-01 12:17:11,012 INFO org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer: Instantiating NMWebApp at 0.0.0.0:8042
+2017-11-01 12:17:11,039 INFO org.eclipse.jetty.util.log: Logging initialized @2303ms
+2017-11-01 12:17:11,116 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2017-11-01 12:17:11,120 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.nodemanager is not defined
+2017-11-01 12:17:11,129 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-11-01 12:17:11,131 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context node
+2017-11-01 12:17:11,131 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-11-01 12:17:11,131 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-11-01 12:17:11,134 INFO org.apache.hadoop.http.HttpServer2: Added filter authentication (class=org.apache.hadoop.security.AuthenticationWithProxyUserFilter) to context node
+2017-11-01 12:17:11,134 INFO org.apache.hadoop.http.HttpServer2: Added filter authentication (class=org.apache.hadoop.security.AuthenticationWithProxyUserFilter) to context static
+2017-11-01 12:17:11,134 INFO org.apache.hadoop.http.HttpServer2: Added filter authentication (class=org.apache.hadoop.security.AuthenticationWithProxyUserFilter) to context logs
+2017-11-01 12:17:11,137 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /node/*
+2017-11-01 12:17:11,137 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+2017-11-01 12:17:11,522 INFO org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2017-11-01 12:17:11,524 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 8042
+2017-11-01 12:17:11,525 INFO org.eclipse.jetty.server.Server: jetty-9.3.19.v20170502
+2017-11-01 12:17:11,579 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2017-11-01 12:17:11,581 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@659eef7{/logs,file:///users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/logs/,AVAILABLE}
+2017-11-01 12:17:11,582 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@55787112{/static,jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/yarn/hadoop-yarn-common-3.0.0-beta1.jar!/webapps/static,AVAILABLE}
+2017-11-01 12:17:12,544 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@19650aa6{/,file:///tmp/jetty-0.0.0.0-8042-node-_-any-7032310040024715373.dir/webapp/,AVAILABLE}{/node}
+2017-11-01 12:17:12,549 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@18acfe88{HTTP/1.1,[http/1.1]}{0.0.0.0:8042}
+2017-11-01 12:17:12,550 INFO org.eclipse.jetty.server.Server: Started @3814ms
+2017-11-01 12:17:12,550 INFO org.apache.hadoop.yarn.webapp.WebApps: Web app node started at 8042
+2017-11-01 12:17:12,552 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Node ID assigned is : c220g1-030803.wisc.cloudlab.us:43522
+2017-11-01 12:17:12,554 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2017-11-01 12:17:12,559 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at node-1/10.0.0.3:8031
+2017-11-01 12:17:12,597 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Sending out 0 NM container statuses: []
+2017-11-01 12:17:12,604 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Registering with RM using containers :[]
+2017-11-01 12:17:13,110 INFO org.apache.hadoop.yarn.server.nodemanager.security.NMContainerTokenSecretManager: Rolling master-key for container-tokens, got key with id 1415382857
+2017-11-01 12:17:13,111 INFO org.apache.hadoop.yarn.server.nodemanager.security.NMTokenSecretManagerInNM: Rolling master-key for container-tokens, got key with id 1957937031
+2017-11-01 12:17:13,112 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Registered with ResourceManager as c220g1-030803.wisc.cloudlab.us:43522 with total resource of <memory:8192, vCores:8>
+2017-11-01 12:19:20,285 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:19:20,287 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:19:20,531 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000003 by user wentingt
+2017-11-01 12:19:20,599 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Creating a new application reference for app application_1509560227945_0001
+2017-11-01 12:19:20,621 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0001 transitioned from NEW to INITING
+2017-11-01 12:19:20,621 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000003
+2017-11-01 12:19:20,621 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000003 to application application_1509560227945_0001
+2017-11-01 12:19:20,629 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0001 transitioned from INITING to RUNNING
+2017-11-01 12:19:20,636 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000002 by user wentingt
+2017-11-01 12:19:20,637 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000003 transitioned from NEW to LOCALIZING
+2017-11-01 12:19:20,638 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:20,653 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000002
+2017-11-01 12:19:20,657 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:20,657 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:19:20,663 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:19:20,678 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000002 to application application_1509560227945_0001
+2017-11-01 12:19:20,678 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Created localizer for container_1509560227945_0001_01_000003
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000002 transitioned from NEW to LOCALIZING
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:19:20,683 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Created localizer for container_1509560227945_0001_01_000002
+2017-11-01 12:19:20,873 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Writing credentials to the nmPrivate file /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0001_01_000002.tokens
+2017-11-01 12:19:20,873 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Writing credentials to the nmPrivate file /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0001_01_000003.tokens
+2017-11-01 12:19:20,897 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Initializing user wentingt
+2017-11-01 12:19:20,903 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Initializing user wentingt
+2017-11-01 12:19:20,938 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Copying from /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0001_01_000003.tokens to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000003.tokens
+2017-11-01 12:19:20,938 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Copying from /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0001_01_000002.tokens to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000002.tokens
+2017-11-01 12:19:20,939 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Localizer CWD set to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001 = file:/tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001
+2017-11-01 12:19:20,939 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Localizer CWD set to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001 = file:/tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001
+2017-11-01 12:19:20,957 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ContainerLocalizer: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:19:20,961 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ContainerLocalizer: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:19:21,816 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000003 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:19:21,816 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000002 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:19:21,817 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000003]
+2017-11-01 12:19:21,818 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000002]
+2017-11-01 12:19:21,976 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000002 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:19:21,977 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000003 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:19:21,977 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000002
+2017-11-01 12:19:21,978 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000003
+2017-11-01 12:19:22,026 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000003/default_container_executor.sh]
+2017-11-01 12:19:22,026 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000002/default_container_executor.sh]
+2017-11-01 12:19:23,030 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000003's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:19:23,032 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000002's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:19:25,126 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000003 succeeded 
+2017-11-01 12:19:25,126 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000002 succeeded 
+2017-11-01 12:19:25,129 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000003 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:19:25,129 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000002 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:19:25,129 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000003
+2017-11-01 12:19:25,162 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000002
+2017-11-01 12:19:25,163 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000003
+2017-11-01 12:19:25,187 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000002
+2017-11-01 12:19:25,187 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000003
+2017-11-01 12:19:25,190 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000003 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:19:25,191 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000002
+2017-11-01 12:19:25,191 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000002 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:19:25,191 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000003 from application application_1509560227945_0001
+2017-11-01 12:19:25,192 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000003
+2017-11-01 12:19:25,192 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:19:25,194 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000002 from application application_1509560227945_0001
+2017-11-01 12:19:25,194 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000002
+2017-11-01 12:19:25,195 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:19:26,914 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:19:26,921 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000004 by user wentingt
+2017-11-01 12:19:26,930 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000004
+2017-11-01 12:19:26,930 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000004 to application application_1509560227945_0001
+2017-11-01 12:19:26,932 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000004 transitioned from NEW to LOCALIZING
+2017-11-01 12:19:26,932 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:26,932 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:26,932 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:19:26,932 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:19:26,933 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000004 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:19:26,933 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000004]
+2017-11-01 12:19:27,063 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000004 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:19:27,063 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000004
+2017-11-01 12:19:27,109 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000004/default_container_executor.sh]
+2017-11-01 12:19:27,202 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000003, container_1509560227945_0001_01_000002]
+2017-11-01 12:19:29,051 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000004's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:19:32,102 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Skipping monitoring container container_1509560227945_0001_01_000004 since CPU usage is not yet available.
+2017-11-01 12:19:43,072 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000000_0/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:19:56,091 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000001_0/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:19:56,372 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000004 succeeded 
+2017-11-01 12:19:56,373 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000004 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:19:56,373 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000004
+2017-11-01 12:19:56,398 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000004
+2017-11-01 12:19:56,399 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000004
+2017-11-01 12:19:56,400 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000004 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:19:56,400 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000004 from application application_1509560227945_0001
+2017-11-01 12:19:56,400 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000004
+2017-11-01 12:19:56,401 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:19:58,406 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000004]
+2017-11-01 12:19:59,011 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:19:59,018 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000005 by user wentingt
+2017-11-01 12:19:59,021 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000005
+2017-11-01 12:19:59,021 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000005 to application application_1509560227945_0001
+2017-11-01 12:19:59,023 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000005 transitioned from NEW to LOCALIZING
+2017-11-01 12:19:59,023 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:59,023 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:19:59,023 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:19:59,023 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:19:59,024 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000005 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:19:59,024 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000005]
+2017-11-01 12:19:59,157 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000005 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:19:59,157 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000005
+2017-11-01 12:19:59,203 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000005/default_container_executor.sh]
+2017-11-01 12:19:59,413 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000005's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:20:01,969 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000000_0/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:20:02,231 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000005 succeeded 
+2017-11-01 12:20:02,232 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000005 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:20:02,232 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000005
+2017-11-01 12:20:02,256 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000005
+2017-11-01 12:20:02,256 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000005
+2017-11-01 12:20:02,257 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000005 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:20:02,257 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000005 from application application_1509560227945_0001
+2017-11-01 12:20:02,258 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000005
+2017-11-01 12:20:02,258 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:03,039 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:20:03,046 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000006 by user wentingt
+2017-11-01 12:20:03,049 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000006
+2017-11-01 12:20:03,049 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000006 to application application_1509560227945_0001
+2017-11-01 12:20:03,050 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000006 transitioned from NEW to LOCALIZING
+2017-11-01 12:20:03,050 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:03,050 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:03,050 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:20:03,051 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:20:03,051 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000006 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:20:03,051 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000006]
+2017-11-01 12:20:03,181 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000006 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:20:03,181 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000006
+2017-11-01 12:20:03,228 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000006/default_container_executor.sh]
+2017-11-01 12:20:04,264 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000005]
+2017-11-01 12:20:05,045 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:20:05,051 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000007 by user wentingt
+2017-11-01 12:20:05,054 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000007
+2017-11-01 12:20:05,054 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000007 to application application_1509560227945_0001
+2017-11-01 12:20:05,055 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000007 transitioned from NEW to LOCALIZING
+2017-11-01 12:20:05,055 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:05,055 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:05,055 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:20:05,055 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:20:05,056 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000007 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:20:05,056 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000007]
+2017-11-01 12:20:05,209 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000007 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:20:05,210 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000007
+2017-11-01 12:20:05,249 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000007/default_container_executor.sh]
+2017-11-01 12:20:05,416 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000006's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:20:05,417 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000007's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:20:06,493 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000006 succeeded 
+2017-11-01 12:20:06,493 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000006 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:20:06,493 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000006
+2017-11-01 12:20:06,514 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000006
+2017-11-01 12:20:06,515 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000006
+2017-11-01 12:20:06,515 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000006 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:20:06,516 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000006 from application application_1509560227945_0001
+2017-11-01 12:20:06,516 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000006
+2017-11-01 12:20:06,516 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:07,860 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000001_0/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:20:08,458 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Skipping monitoring container container_1509560227945_0001_01_000007 since CPU usage is not yet available.
+2017-11-01 12:20:08,522 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000006]
+2017-11-01 12:20:20,871 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000000_1/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:20:21,107 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:20:21,113 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000008 by user wentingt
+2017-11-01 12:20:21,116 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000008
+2017-11-01 12:20:21,116 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000008 to application application_1509560227945_0001
+2017-11-01 12:20:21,118 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000008 transitioned from NEW to LOCALIZING
+2017-11-01 12:20:21,118 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:21,118 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:21,118 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:20:21,119 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:20:21,119 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000008 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:20:21,119 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000008]
+2017-11-01 12:20:21,134 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000007 succeeded 
+2017-11-01 12:20:21,135 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000007 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:20:21,135 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000007
+2017-11-01 12:20:21,164 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000007
+2017-11-01 12:20:21,164 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000007
+2017-11-01 12:20:21,165 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000007 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:20:21,165 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000007 from application application_1509560227945_0001
+2017-11-01 12:20:21,165 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000007
+2017-11-01 12:20:21,165 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:21,242 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000008 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:20:21,243 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000008
+2017-11-01 12:20:21,288 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000008/default_container_executor.sh]
+2017-11-01 12:20:23,114 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:20:23,123 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0001_01_000009 by user wentingt
+2017-11-01 12:20:23,127 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000009
+2017-11-01 12:20:23,127 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0001_01_000009 to application application_1509560227945_0001
+2017-11-01 12:20:23,128 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000009 transitioned from NEW to LOCALIZING
+2017-11-01 12:20:23,128 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:23,128 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0001
+2017-11-01 12:20:23,128 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:20:23,129 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0001
+2017-11-01 12:20:23,130 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000009 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:20:23,130 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0001_01_000009]
+2017-11-01 12:20:23,172 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000007]
+2017-11-01 12:20:23,266 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000009 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:20:23,266 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0001_01_000009
+2017-11-01 12:20:23,310 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000009/default_container_executor.sh]
+2017-11-01 12:20:23,625 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000008's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:20:23,626 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0001_01_000009's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:20:24,500 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000008 succeeded 
+2017-11-01 12:20:24,500 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000008 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:20:24,500 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000008
+2017-11-01 12:20:24,523 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000008
+2017-11-01 12:20:24,523 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000008
+2017-11-01 12:20:24,524 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000008 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:20:24,524 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000008 from application application_1509560227945_0001
+2017-11-01 12:20:24,524 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000008
+2017-11-01 12:20:24,524 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:25,918 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000000_1/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:20:26,530 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0001_01_000008]
+2017-11-01 12:20:26,664 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Skipping monitoring container container_1509560227945_0001_01_000009 since CPU usage is not yet available.
+2017-11-01 12:20:38,930 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0001/output/attempt_1509560227945_0001_m_000001_1/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:20:39,194 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0001_01_000009 succeeded 
+2017-11-01 12:20:39,195 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000009 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:20:39,195 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0001_01_000009
+2017-11-01 12:20:39,223 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001/container_1509560227945_0001_01_000009
+2017-11-01 12:20:39,223 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000009
+2017-11-01 12:20:39,224 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0001_01_000009 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:20:39,224 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0001_01_000009 from application application_1509560227945_0001
+2017-11-01 12:20:39,224 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0001_01_000009
+2017-11-01 12:20:39,224 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:39,236 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0001_000001 (auth:SIMPLE)
+2017-11-01 12:20:39,244 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Stopping container with container Id: container_1509560227945_0001_01_000009
+2017-11-01 12:20:39,245 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Stop Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0001	CONTAINERID=container_1509560227945_0001_01_000009
+2017-11-01 12:20:46,241 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0001 transitioned from RUNNING to APPLICATION_RESOURCES_CLEANINGUP
+2017-11-01 12:20:46,242 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0001
+2017-11-01 12:20:46,243 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_STOP for appId application_1509560227945_0001
+2017-11-01 12:20:46,245 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0001 transitioned from APPLICATION_RESOURCES_CLEANINGUP to FINISHED
+2017-11-01 12:20:46,245 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler: Scheduling Log Deletion for application: application_1509560227945_0001, with delay of 10800 seconds
+2017-11-01 12:27:10,954 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Cache Size Before Clean: 0, Total Deleted: 0, Public Deleted: 0, Private Deleted: 0
+2017-11-01 12:28:57,099 INFO SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for appattempt_1509560227945_0002_000001 (auth:SIMPLE)
+2017-11-01 12:28:57,106 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Start request for container_1509560227945_0002_01_000006 by user wentingt
+2017-11-01 12:28:57,109 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: Creating a new application reference for app application_1509560227945_0002
+2017-11-01 12:28:57,110 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	IP=128.104.222.44	OPERATION=Start Container Request	TARGET=ContainerManageImpl	RESULT=SUCCESS	APPID=application_1509560227945_0002	CONTAINERID=container_1509560227945_0002_01_000006
+2017-11-01 12:28:57,110 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0002 transitioned from NEW to INITING
+2017-11-01 12:28:57,111 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Adding container_1509560227945_0002_01_000006 to application application_1509560227945_0002
+2017-11-01 12:28:57,112 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0002 transitioned from INITING to RUNNING
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0002_01_000006 transitioned from NEW to LOCALIZING
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_INIT for appId application_1509560227945_0002
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_INIT for appId application_1509560227945_0002
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got APPLICATION_INIT for service mapreduce_shuffle
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.mapred.ShuffleHandler: Added token for job_1509560227945_0002
+2017-11-01 12:28:57,115 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Created localizer for container_1509560227945_0002_01_000006
+2017-11-01 12:28:57,140 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Writing credentials to the nmPrivate file /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0002_01_000006.tokens
+2017-11-01 12:28:57,140 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Initializing user wentingt
+2017-11-01 12:28:57,155 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Copying from /tmp/hadoop-wentingt/nm-local-dir/nmPrivate/container_1509560227945_0002_01_000006.tokens to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002/container_1509560227945_0002_01_000006.tokens
+2017-11-01 12:28:57,155 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Localizer CWD set to /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002 = file:/tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002
+2017-11-01 12:28:57,176 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ContainerLocalizer: Disk Validator: yarn.nodemanager.disk-validator is loaded.
+2017-11-01 12:28:57,352 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0002_01_000006 transitioned from LOCALIZING to SCHEDULED
+2017-11-01 12:28:57,352 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler: Starting container [container_1509560227945_0002_01_000006]
+2017-11-01 12:28:57,463 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0002_01_000006 transitioned from SCHEDULED to RUNNING
+2017-11-01 12:28:57,463 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Starting resource-monitoring for container_1509560227945_0002_01_000006
+2017-11-01 12:28:57,507 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: launchContainer: [nice, -n, 0, bash, /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002/container_1509560227945_0002_01_000006/default_container_executor.sh]
+2017-11-01 12:29:00,031 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: container_1509560227945_0002_01_000006's ip = 128.104.222.33, and hostname = c220g1-030803.wisc.cloudlab.us
+2017-11-01 12:29:00,832 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Container container_1509560227945_0002_01_000006 succeeded 
+2017-11-01 12:29:00,833 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0002_01_000006 transitioned from RUNNING to EXITED_WITH_SUCCESS
+2017-11-01 12:29:00,833 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch: Cleaning up container container_1509560227945_0002_01_000006
+2017-11-01 12:29:00,849 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002/container_1509560227945_0002_01_000006
+2017-11-01 12:29:00,849 INFO org.apache.hadoop.yarn.server.nodemanager.NMAuditLogger: USER=wentingt	OPERATION=Container Finished - Succeeded	TARGET=ContainerImpl	RESULT=SUCCESS	APPID=application_1509560227945_0002	CONTAINERID=container_1509560227945_0002_01_000006
+2017-11-01 12:29:00,849 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerImpl: Container container_1509560227945_0002_01_000006 transitioned from EXITED_WITH_SUCCESS to DONE
+2017-11-01 12:29:00,849 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Removing container_1509560227945_0002_01_000006 from application application_1509560227945_0002
+2017-11-01 12:29:00,849 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: Stopping resource-monitoring for container_1509560227945_0002_01_000006
+2017-11-01 12:29:00,850 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event CONTAINER_STOP for appId application_1509560227945_0002
+2017-11-01 12:29:01,082 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0002/output/attempt_1509560227945_0002_m_000000_1/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:29:02,854 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Removed completed containers from NM context: [container_1509560227945_0002_01_000006]
+2017-11-01 12:29:06,588 ERROR org.apache.hadoop.mapred.ShuffleHandler: Shuffle error in populating headers :
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find usercache/wentingt/appcache/application_1509560227945_0002/output/attempt_1509560227945_0002_m_000000_1/file.out.index in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:489)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:166)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:892)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle$1.load(ShuffleHandler.java:886)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3542)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2323)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2286)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3957)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4875)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.getMapOutputInfo(ShuffleHandler.java:1133)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.populateHeaders(ShuffleHandler.java:1167)
+	at org.apache.hadoop.mapred.ShuffleHandler$Shuffle.messageReceived(ShuffleHandler.java:1034)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-11-01 12:29:13,866 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0002 transitioned from RUNNING to APPLICATION_RESOURCES_CLEANINGUP
+2017-11-01 12:29:13,867 INFO org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor: Deleting absolute path : /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509560227945_0002
+2017-11-01 12:29:13,867 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices: Got event APPLICATION_STOP for appId application_1509560227945_0002
+2017-11-01 12:29:13,867 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationImpl: Application application_1509560227945_0002 transitioned from APPLICATION_RESOURCES_CLEANINGUP to FINISHED
+2017-11-01 12:29:13,867 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler: Scheduling Log Deletion for application: application_1509560227945_0002, with delay of 10800 seconds

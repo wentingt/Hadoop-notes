@@ -1,0 +1,29 @@
+2017-11-01 12:20:25,780 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=535088320, maxSingleShuffleLimit=133772080, mergeThreshold=353158304, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2017-11-01 12:20:25,784 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1509560227945_0001_r_000000_3 Thread started: EventFetcher for fetching Map Completion Events
+2017-11-01 12:20:25,795 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of OBSOLETE map-task: 'attempt_1509560227945_0001_m_000000_0'
+2017-11-01 12:20:25,795 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of OBSOLETE map-task: 'attempt_1509560227945_0001_m_000001_0'
+2017-11-01 12:20:25,795 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1509560227945_0001_m_000000_0'
+2017-11-01 12:20:25,798 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1509560227945_0001_m_000001_0'
+2017-11-01 12:20:25,799 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1509560227945_0001_r_000000_3: Got 2 new map-outputs
+2017-11-01 12:20:25,920 WARN [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Invalid map id 
+java.lang.IllegalArgumentException: TaskAttemptId string : TTP/1.1 500 Internal Server Error
+Content-Type: text/plain; charset=UTF is not properly formed
+	at org.apache.hadoop.mapreduce.TaskAttemptID.forName(TaskAttemptID.java:201)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyMapOutput(Fetcher.java:503)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyFromHost(Fetcher.java:342)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.run(Fetcher.java:198)
+2017-11-01 12:20:25,922 WARN [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: copyMapOutput failed for tasks [attempt_1509560227945_0001_m_000000_1]
+2017-11-01 12:20:25,924 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Reporting fetch failure for attempt_1509560227945_0001_m_000000_1 to MRAppMaster.
+2017-11-01 12:20:25,925 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: c220g1-030803.wisc.cloudlab.us:13562 freed by fetcher#5 in 128ms
+2017-11-01 12:20:38,932 WARN [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Invalid map id 
+java.lang.IllegalArgumentException: TaskAttemptId string : TTP/1.1 500 Internal Server Error
+Content-Type: text/plain; charset=UTF is not properly formed
+	at org.apache.hadoop.mapreduce.TaskAttemptID.forName(TaskAttemptID.java:201)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyMapOutput(Fetcher.java:503)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyFromHost(Fetcher.java:342)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.run(Fetcher.java:198)
+2017-11-01 12:20:38,932 WARN [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: copyMapOutput failed for tasks [attempt_1509560227945_0001_m_000000_1, attempt_1509560227945_0001_m_000001_1]
+2017-11-01 12:20:38,933 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Reporting fetch failure for attempt_1509560227945_0001_m_000000_1 to MRAppMaster.
+2017-11-01 12:20:38,933 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Reporting fetch failure for attempt_1509560227945_0001_m_000001_1 to MRAppMaster.
+2017-11-01 12:20:38,933 FATAL [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Shuffle failed with too many fetch failures and insufficient progress!
+2017-11-01 12:20:38,933 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: c220g1-030803.wisc.cloudlab.us:13562 freed by fetcher#5 in 10ms
