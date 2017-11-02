@@ -1,0 +1,47 @@
+2017-11-01 19:59:26,141 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=535088320, maxSingleShuffleLimit=133772080, mergeThreshold=353158304, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2017-11-01 19:59:26,144 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1509585476261_0006_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2017-11-01 19:59:26,152 DEBUG [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: Got 3 map completion events from 0
+2017-11-01 19:59:26,156 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning c220g1-031118.wisc.cloudlab.us:13562 with 1 to fetcher#5
+2017-11-01 19:59:26,156 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 1 of 1 to c220g1-031118.wisc.cloudlab.us:13562 to fetcher#5
+2017-11-01 19:59:26,157 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Fetcher 5 going to fetch from c220g1-031118.wisc.cloudlab.us:13562 for: [attempt_1509585476261_0006_m_000002_0]
+2017-11-01 19:59:26,157 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: MapOutput URL for c220g1-031118.wisc.cloudlab.us:13562 -> http://c220g1-031118.wisc.cloudlab.us:13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000002_0
+2017-11-01 19:59:26,157 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1509585476261_0006_r_000000_0: Got 3 new map-outputs
+2017-11-01 19:59:26,157 DEBUG [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: GetMapEventsThread about to sleep for 1000
+2017-11-01 19:59:26,276 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: url=13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000002_0;encHash=61KbDUj7v23U62oNefPUVgzPEBE=;replyHash=msEyR9YmC4DSkz8BlH7WnxyMDDw=
+2017-11-01 19:59:26,277 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000002_0 sent hash and received reply
+2017-11-01 19:59:26,281 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: header: attempt_1509585476261_0006_m_000002_0, len: 28, decomp len: 24
+2017-11-01 19:59:26,281 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: attempt_1509585476261_0006_m_000002_0: Proceeding with shuffle since usedMemory (0) is lesser than memoryLimit (535088320).CommitMemory is (0)
+2017-11-01 19:59:26,283 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#5 about to shuffle output of map attempt_1509585476261_0006_m_000002_0 decomp: 24 len: 28 to MEMORY
+2017-11-01 19:59:26,285 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 24 bytes from map-output for attempt_1509585476261_0006_m_000002_0
+2017-11-01 19:59:26,287 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 24, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->24
+2017-11-01 19:59:26,289 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: map attempt_1509585476261_0006_m_000002_0 done 1 / 3 copied.
+2017-11-01 19:59:26,289 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: c220g1-031118.wisc.cloudlab.us:13562 freed by fetcher#5 in 132ms
+2017-11-01 19:59:26,289 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning c220g1-031118.wisc.cloudlab.us:13562 with 2 to fetcher#5
+2017-11-01 19:59:26,289 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 2 of 2 to c220g1-031118.wisc.cloudlab.us:13562 to fetcher#5
+2017-11-01 19:59:26,289 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: Fetcher 5 going to fetch from c220g1-031118.wisc.cloudlab.us:13562 for: [attempt_1509585476261_0006_m_000001_0, attempt_1509585476261_0006_m_000000_0]
+2017-11-01 19:59:26,289 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: MapOutput URL for c220g1-031118.wisc.cloudlab.us:13562 -> http://c220g1-031118.wisc.cloudlab.us:13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000001_0,attempt_1509585476261_0006_m_000000_0
+2017-11-01 19:59:26,295 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: url=13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000001_0,attempt_1509585476261_0006_m_000000_0;encHash=RXItoTZGnK254RNzHQlhNhwepd4=;replyHash=FcHC4ACZvemtpmzfWuksq4As3sY=
+2017-11-01 19:59:26,295 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1509585476261_0006&reduce=0&map=attempt_1509585476261_0006_m_000001_0,attempt_1509585476261_0006_m_000000_0 sent hash and received reply
+2017-11-01 19:59:26,296 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: header: attempt_1509585476261_0006_m_000001_0, len: 28, decomp len: 24
+2017-11-01 19:59:26,296 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: attempt_1509585476261_0006_m_000001_0: Proceeding with shuffle since usedMemory (24) is lesser than memoryLimit (535088320).CommitMemory is (24)
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#5 about to shuffle output of map attempt_1509585476261_0006_m_000001_0 decomp: 24 len: 28 to MEMORY
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 24 bytes from map-output for attempt_1509585476261_0006_m_000001_0
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 24, inMemoryMapOutputs.size() -> 2, commitMemory -> 24, usedMemory ->48
+2017-11-01 19:59:26,296 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: map attempt_1509585476261_0006_m_000001_0 done 2 / 3 copied.
+2017-11-01 19:59:26,296 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: header: attempt_1509585476261_0006_m_000000_0, len: 28, decomp len: 24
+2017-11-01 19:59:26,296 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: attempt_1509585476261_0006_m_000000_0: Proceeding with shuffle since usedMemory (48) is lesser than memoryLimit (535088320).CommitMemory is (48)
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#5 about to shuffle output of map attempt_1509585476261_0006_m_000000_0 decomp: 24 len: 28 to MEMORY
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 24 bytes from map-output for attempt_1509585476261_0006_m_000000_0
+2017-11-01 19:59:26,296 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 24, inMemoryMapOutputs.size() -> 3, commitMemory -> 48, usedMemory ->72
+2017-11-01 19:59:26,297 DEBUG [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: map attempt_1509585476261_0006_m_000000_0 done 3 / 3 copied.
+2017-11-01 19:59:26,297 INFO [fetcher#5] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: c220g1-031118.wisc.cloudlab.us:13562 freed by fetcher#5 in 8ms
+2017-11-01 19:59:26,297 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: EventFetcher is interrupted.. Returning
+2017-11-01 19:59:26,305 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 3 in-memory map-outputs and 0 on-disk map-outputs
+2017-11-01 19:59:26,363 INFO [main] org.apache.hadoop.mapred.Merger: Merging 3 sorted segments
+2017-11-01 19:59:26,364 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 63 bytes
+2017-11-01 19:59:26,375 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merged 3 segments, 72 bytes to disk to satisfy reduce memory limit
+2017-11-01 19:59:26,376 DEBUG [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Disk file: /tmp/hadoop-wentingt/nm-local-dir/usercache/wentingt/appcache/application_1509585476261_0006/output/attempt_1509585476261_0006_r_000000_0/map_2.out.merged Length is 72
+2017-11-01 19:59:26,376 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 1 files, 72 bytes from disk
+2017-11-01 19:59:26,377 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+2017-11-01 19:59:26,377 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2017-11-01 19:59:26,380 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 65 bytes
