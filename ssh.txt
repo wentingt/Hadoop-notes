@@ -3,3 +3,4 @@ ssh-keygen
 cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 
 ssh localhost
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVZp4BGd6KghM/ceOlzeIXXP43YPOUZiuumjutm9mCImNGaY795mmohWMkz2AB+GrXOW+103YTdYjia2qEMBAzR+40Bm2WySW5vatK+CgkZMIM0ppmRUykIgornc4iorHeIIb9qXBcXmsLET3o6etVftUWk9I/uDHLb1wjq43QbWkSx9P7O8CrGqPp31YgPnj7u5EPg4hngavIKUIM6uz3Jak/8sDIctLXXmvMEnsS7+30bBSt+FVG8KU0qRxQkub0ZZpMx/jMkrWLCtn8+T9ZlPHw+zztE4i/R/0biZd3aP3mdVA1401T3VVIsZBjhOH/MPpuWhsqOeX3pV54+AQR wentingt@r1.hadoop-3.gaia-pg0.clemson.cloudlab.us
